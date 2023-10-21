@@ -7,19 +7,8 @@ print('Jogo para adivinhar o número')
 
 flg_prog = True #flag para manter o programa rodando.
 cnt = 1 # variável acumuladora para contabilizar número de tentativas.
-num_pass = 0
+num_pass = 100
 num = 0
-#Entrada e validação do número segredo
-while flg_prog:
-
-    num_pass_str = input('Peça para um amigo digitar um número inteiro ou digite x para abortar: ')
-    if num_pass_str.isdigit():
-        num_pass = int(num_pass_str)
-        break
-    elif num_pass_str == 'x':
-        flg_prog = False
-    else:
-        print('Por favor digite apenas números inteiros')
 
 while flg_prog:
     num_str = input(f'{cnt}º Tentativa  digite um número ou digite x para sair e pressione enter: ')
@@ -41,7 +30,6 @@ while flg_prog:
         flg_prog = False
     else:
         print('Digite apenas números inteiros')        
-
 
 if flg_prog:
     print(f'Parabéns você adivinhou o número {num_pass} em {cnt} tentativas')
