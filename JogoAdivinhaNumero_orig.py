@@ -2,9 +2,11 @@
 #Objetivo: Jogo de adivinhação, onde pede um número e em seguida pede para usuário tente adivinhar
 #Dando dicas se o número digitado é maior ou menor que o número do segredo.
 
+import getpass
+
 print('Jogo para adivinhar o número')
 
-
+print('obs: O número segredo não será mostrado em tela na hora da digitação.')
 flg_prog = True #flag para manter o programa rodando.
 cnt = 1 # variável acumuladora para contabilizar número de tentativas.
 num_pass = 0
@@ -12,7 +14,7 @@ num = 0
 #Entrada e validação do número segredo
 while flg_prog:
 
-    num_pass_str = input('Peça para um amigo digitar um número inteiro ou digite x para abortar: ')
+    num_pass_str = getpass.getpass('Peça para um amigo digitar um número inteiro ou digite x para abortar: ')
     if num_pass_str.isdigit():
         num_pass = int(num_pass_str)
         break
